@@ -1,47 +1,35 @@
-import { Route,Link} from 'react-router-dom';
+import React, { Component } from 'react';
+import {Route, Switch, } from 'react-router-dom';
 import './App.css';
 import JotzFolder from './JotzFolder/JotzFolder';
 import JotzForm from './JotzForm/JotzForm';
 import LandingPage from "./LandingPage/LandingPage";
 import SignUp from './SignUp/SignUp';
+import NavBar from './NavBar/NavBar';
 
+class App extends Component {
+  render() {
+    return (
+      <div className="App">
 
-
-function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        
-        <nav>
-          <ul>
-            
-          <li>
-            <Link to="/">home</Link>
-            </li>
-            <li>
-            <Link to="/add">Add</Link>
-            </li>
-            <li>
-            <Link to="/list">list</Link>
-            </li>
-            <li>
-            <Link to="/contact">contact</Link>
-            </li>
-          </ul>
-        </nav>
-      
-      </header>
   
-      <main>
-        <Route path ="/" exact component ={LandingPage} /> 
+          <NavBar />
+          <Switch>
+
+          <Route path ="/" exact component ={LandingPage} /> 
         <Route path="/contact" component={SignUp} />
         <Route path="/add" component={JotzForm} />
         <Route path="/list" component={JotzFolder} /> 
 
 
-         </main>
-    </div>
-  );
+          </Switch>
+     
+
+      </div>
+    );
+  }
 }
+
+  
 
 export default App;

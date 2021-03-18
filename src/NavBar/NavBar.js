@@ -1,8 +1,8 @@
 import React from 'react';
 
-import './SignUp.css';
+import './NavBar.css';
 
-export default function SignUp(props) {
+export default function NavBar(props) {
   return (
 
 

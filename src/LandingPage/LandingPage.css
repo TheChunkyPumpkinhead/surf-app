@@ -1,0 +1,44 @@
+/* background image */
+.landing-overlay {
+  background-image: url();
+  background-size: cover;
+  border-radius: 1em;
+  display:flex; 
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  margin: 0em 1em 1em 1em;
+  padding:8em;
+}
+
+.landing-page-header {
+  color:white;
+  font-size: 1.5em;
+}
+
+.landing-content-div {
+  display: flex; 
+  flex-direction: column;
+  width: 15em;
+}
+
+.landing-page-content {
+  color:white;
+  font-weight: bold;
+}
+
+.landing-btn {
+  background:orangered;
+  padding: .3em .6em;
+  color: white;
+  border: none;
+  border-radius: .3em;
+  font-size: 1.2em;
+  font-family: sans-serif;
+  font-weight:bold;
+  margin: .3em;
+}
+
+
+
+

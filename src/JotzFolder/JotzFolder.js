@@ -9,7 +9,7 @@ export default function JotzFolder(props) {
    
     <main role="main">
       <header role="banner">
-        <h1></h1>
+        <h1>Surf Jotz</h1>
       </header>
       <section>
         <header>
