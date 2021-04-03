@@ -12,17 +12,17 @@ export default function NavBar(props) {
       </header>
       <section>
       
-          <form class='signup-form'>
+          <form className='signup-form'>
             <div>
-              <label for="first-name">First name</label>
+              <label htmlFor="first-name">First name</label>
               <input placeholder='Johnny' type="text" name='first-name' id='first-name' />
             </div>
             <div>
-              <label for="last-name">Last name</label>
+              <label htmlFor="last-name">Last name</label>
               <input type="text" name='last-name' id='last-name' placeholder='Utah' />
             </div>
             <div>
-              <label for="username">Email</label>
+              <label htmlFor="username">Email</label>
               <input type="text" name='username' id='username'placeholder='johnny_utah@FBI.com' />
             </div>
             

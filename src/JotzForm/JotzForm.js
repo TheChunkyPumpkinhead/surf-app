@@ -2,59 +2,66 @@ import React, { Component } from 'react';
 // import { Link } from 'react-router-dom';
 import './JotzForm.css';
 import JotzApiService from '../services/jotz-api-service';
+// import JotzContext from '../services'
 
 
-export default function JotzFolder(props) {
-  return (
 
 
-// export default class JotzForm extends Component {
-//   static contextType = JotzContext;
 
-//   handleSubmit = ev => {
-//     ev.preventDefault();
+export default class JotzForm extends Component {
+  // static contextType = JotzContext;
 
-//     const { title, content, date_published, city } = ev.target;
-//     const jotz = {
-//       title: title.value,
-//       content: content.value,
-//       date_published: date_published.value,
-//       city: city.value,
+  handleSubmit = ev => {
+    ev.preventDefault();
 
-//     };
-//     JotzApiService.postJotz(jotz)
-//       .then(this.context.addComment)
-//       .then(() => {
-//         title.value = '';
-//       })
-//       .catch(this.context.setError);
-//   };
+    const { title, content, date_published, city } = ev.target;
+    const jotz = {
+      title: title.value,
+      content: content.value,
+      date_published: date_published.value,
+      city: city.value,
 
-// render() {
-//   return(
+    };
+    JotzApiService.postJotz(jotz)
+      .then(this.context.addComment)
+      .then(() => {
+        title.value = '';
+      })
+      .catch(this.context.setError);
+  };
+
+render() {
+  return(
 
 
-  main role = "main" >
+  <main role = "main" >
       <header>
         <h1>Surf Jotz</h1>
       </header>
       <section>
-        <form   onSubmit={handleSubmit} id="record-dream">
-          <section class="form-section overview-section">
-            <label for="surf-title">Info Title</label>
+        <form   onSubmit={this.handleSubmit} id="record-jotz">
+          <section className="form-section overview-section">
+            <label htmlFor="surf-title">Info Title</label>
             <input type="text" name="title" placeholder="surf spot" required/>
           </section>
-          <section class="form-section overview-section">
-            <label for="surf-summary">Scribble some info</label>
-            <textarea name="description" rows="15" required></textarea>
+          <section className="form-section overview-section">
+            <label htmlFor="surf-city">City</label>
+            <input type="text" name="city" placeholder="surf spot" required/>
+          </section>
+
+
+
+          <section className="form-section overview-section">
+            <label  htmlFor="surf-summary">Scribble some info</label>
+            <textarea name="content" rows="15" required></textarea>
           </section>
           
     <section class="form-section">
-            <label class="dsurf-date-label" for="date-month">Date of Info</label>
+            <label className="dsurf-date-label" for="date-month">Date of Info</label>
             <input type="date" name="date_published" id="date-month" placeholder="01" min="1" max="12" required=""/> .
             
           </section>
-          <section class="button-section">
+          <section className="button-section">
             <button type="submit">Submit</button>
             
           </section>
@@ -63,4 +70,4 @@ export default function JotzFolder(props) {
     </main>
  
 );
-}
+}}

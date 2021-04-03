@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import {Route, Switch, } from 'react-router-dom';
+import {Route } from 'react-router-dom';
 import './App.css';
 import JotzFolder from './JotzFolder/JotzFolder';
 import JotzForm from './JotzForm/JotzForm';
@@ -14,7 +14,7 @@ class App extends Component {
 
   
           <NavBar />
-          <Switch>
+          
 
           <Route path ="/" exact component ={LandingPage} /> 
         <Route path="/contact" component={SignUp} />
@@ -22,7 +22,7 @@ class App extends Component {
         <Route path="/list" component={JotzFolder} /> 
 
 
-          </Switch>
+          
      
 
       </div>
