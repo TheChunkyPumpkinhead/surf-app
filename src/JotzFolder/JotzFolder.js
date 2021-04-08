@@ -1,11 +1,11 @@
 import React from 'react';
 import './JotzFolder.css';
-// import { Link } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
 export default function JotzFolder(props) {
   return (
 
-
+   
    
     <main role="main">
       <header role="banner">

@@ -1,73 +1,104 @@
 import React, { Component } from 'react';
-// import { Link } from 'react-router-dom';
+import config from '../config';
+
 import './JotzForm.css';
-import JotzApiService from '../services/jotz-api-service';
-// import JotzContext from '../services'
 
 
-
-
-
-export default class JotzForm extends Component {
-  // static contextType = JotzContext;
-
-  handleSubmit = ev => {
-    ev.preventDefault();
-
-    const { title, content, date_published, city } = ev.target;
-    const jotz = {
-      title: title.value,
-      content: content.value,
-      date_published: date_published.value,
-      city: city.value,
-
+class JotzForm extends Component {
+  constructor(props) {
+    super(props);
+    this.state = {
+      title: '',
+      content: '',
+      city: ''
     };
-    JotzApiService.postJotz(jotz)
-      .then(this.context.addComment)
-      .then(() => {
-        title.value = '';
+  }
+
+  handleSubmit = (event) => {
+    event.preventDefault();
+    //better to call payload instead of note
+    const jotz = {
+      title: this.state.title,
+      content: this.state.content,
+      city: this.state.city,
+   
+      
+    };
+    // console.log(note)
+
+    fetch(`${config.API_ENDPOINT}/jotz/`,
+    // note._id is what?
+      {
+        method: 'POST',
+        body: JSON.stringify(jotz),
+        headers: {
+          'content-type': 'application/json',
+        
+        },
       })
-      .catch(this.context.setError);
+      .then((res) => {
+        if (!res.ok) {
+          return res.json().then((error) => {
+            throw error;
+          });
+        }
+        return res.json();
+      })
+      .then((results) => {
+        console.log(results);
+        // window.location = '/';
+        // where is the location for this?
+      })
+      .catch((error) => {
+        console.log({ error });
+      });
   };
 
-render() {
-  return(
+  render() {
+    return (
+      <section className='add-notes'>
+        <form className='add-JotzForm' onSubmit={this.handleSubmit}>
 
+          <label> Title
+        <input
+              type='text'
+              className='input-title'
+              placeholder='write title'
+              value={this.state.title}
+              name='title'
+              id='title'
+              onChange={(event) => this.setState({ title: event.target.value })}
+              required
+            /></label>
 
-  <main role = "main" >
-      <header>
-        <h1>Surf Jotz</h1>
-      </header>
-      <section>
-        <form   onSubmit={this.handleSubmit} id="record-jotz">
-          <section className="form-section overview-section">
-            <label htmlFor="surf-title">Info Title</label>
-            <input type="text" name="title" placeholder="surf spot" required/>
-          </section>
-          <section className="form-section overview-section">
-            <label htmlFor="surf-city">City</label>
-            <input type="text" name="city" placeholder="surf spot" required/>
-          </section>
+          <label> Note
+          <input
+              type="text"
+              className='input-note'
+              placeholder='write notes here'
+              value={this.state.content}
+              name='note'
+              id='note'
+              onChange={(event) => this.setState({ content: event.target.value })}
+              required
+            />
+              <input
+              type="city"
+              className='input-city'
+              placeholder='city'
+              value={this.state.city}
+              name='city'
+              id='city'
+              onChange={(event) => this.setState({ city: event.target.value })}
+              required
+            />
+          </label>
+          <button className='note-button' type='submit'>Add Note</button>
 
-
-
-          <section className="form-section overview-section">
-            <label  htmlFor="surf-summary">Scribble some info</label>
-            <textarea name="content" rows="15" required></textarea>
-          </section>
-          
-    <section class="form-section">
-            <label className="dsurf-date-label" for="date-month">Date of Info</label>
-            <input type="date" name="date_published" id="date-month" placeholder="01" min="1" max="12" required=""/> .
-            
-          </section>
-          <section className="button-section">
-            <button type="submit">Submit</button>
-            
-          </section>
         </form>
       </section>
-    </main>
- 
-);
-}}
+    );
+  }
+}
+
+export default JotzForm;

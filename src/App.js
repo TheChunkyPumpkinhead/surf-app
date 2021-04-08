@@ -1,10 +1,10 @@
 import React, { Component } from 'react';
-import {Route } from 'react-router-dom';
+import {Route, BrowserRouter, Switch} from 'react-router-dom';
 import './App.css';
 import JotzFolder from './JotzFolder/JotzFolder';
 import JotzForm from './JotzForm/JotzForm';
 import LandingPage from "./LandingPage/LandingPage";
-import SignUp from './SignUp/SignUp';
+import AboutPage from './About/AboutPage';
 import NavBar from './NavBar/NavBar';
 
 class App extends Component {
@@ -12,20 +12,17 @@ class App extends Component {
     return (
       <div className="App">
 
-  
+<BrowserRouter>
           <NavBar />
-          
+          <Switch>
 
           <Route path ="/" exact component ={LandingPage} /> 
-        <Route path="/contact" component={SignUp} />
+          <Route path= "/about" component = {AboutPage} />
         <Route path="/add" component={JotzForm} />
         <Route path="/list" component={JotzFolder} /> 
-
-
-          
-     
-
-      </div>
+        </Switch>
+        </BrowserRouter>
+        </div>
     );
   }
 }

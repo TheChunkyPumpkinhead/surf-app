@@ -6,7 +6,7 @@ body {
   font-family: "Open Sans",
   sans-serif;
   font-size: 20px;
-  color: #444;
+  color: rgb(163, 93, 93);
   text-align: center;
   line-height: 1.5;
   min-width: 320px;
@@ -15,7 +15,7 @@ body {
 nav,
 footer {
   padding: 1% 0;
-  background-color: #aaa;
+  background-color: rgb(68, 60, 110);
 }
 
 nav {
@@ -35,7 +35,7 @@ section {
 }
 
 section:nth-child(even) {
-  background-color: #ddd;
+  background-color: rgb(82, 106, 184);
 }
 
 p, h2 {
