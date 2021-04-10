@@ -1,70 +1,51 @@
-# Getting Started with Create React App
+Pain Management Capstone
+This is a troubleshooting application for people to seek out a solution for their pain. Users can view a guide on how to treat trigger points via massage therapy, and a simple guideline page on what a trigger point is. Users will be guided to a trigger point corresponding to their area of pain by selecting an image, they can save this trigger point to their account and add notes.
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+1. Working Prototype
+You can access a working prototype of the React app here: https://pain-management-capstone-client.courtneycarson.vercel.app/ and Node app here: https://dry-bastion-25929.herokuapp.com/
 
-## Available Scripts
+2. User Stories
+This app is for two types of users: a visitor and a logged-in user as a visitor
 
-In the project directory, you can run:
+I want to understand what I can do with this app (or sign up, or log in)
+so I can decide if I want to use it
+Landing Page
+as a visitor
+I want to understand what I can do with this app (or sign up, or log in)
+so I can decide if I want to use it
+Log In Page
+as a returning registered user
+I want to enter my username and password
+so I can have access to my account, and use this app
+Sign Up Page
+as a visitor
+I want to register to use this app
+so I can create an account
+Home Page
+as a logged in user
+I want to be able to preview the content of the app
+so I can begin to troubleshoot my pain
+About Page
+as a logged in user
+I want to learn about what trigger point therapy is
+so I can treat my pain
+Treatment Page
+as a logged in user
+I want to learn about how to massage trigger points
+so I can treat my pain
+Past Treatments Page
+as a logged in user
+I want to see past pain areas I've had
+so I can see my progress
+3. Functionality
+The app's functionality includes:
 
-### `npm start`
-
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in the browser.
-
-The page will reload if you make edits.\
-You will also see any lint errors in the console.
-
-### `npm test`
-
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
-
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can’t go back!**
-
-If you aren’t satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you’re on your own.
-
-You don’t have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn’t feel obligated to use this feature. However we understand that this tool wouldn’t be useful if you couldn’t customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+Every User has the ability to create an account
+A registered user has the ability to log in to their account
+A registered user has the ability to save trigger points to their account
+A registered user has the ability to add notes to their account
+4. Technology
+Front-End: HTML5, CSS3, JavaScript ES6, React
+Back-End: Node.js, Express.js, Mocha, Chai, RESTful API Endpoints, Postgres
+Development Environment: Heroku, DBeaver
+5. Wireframes
