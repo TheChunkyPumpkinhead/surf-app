@@ -1,6 +1,6 @@
 import React from 'react';
 import './AboutPage.css';
-import jotzimage3 from "../jotzimage3.jpeg"
+import jotzimage3 from "../images/jotzimage3.jpeg"
 
 
 

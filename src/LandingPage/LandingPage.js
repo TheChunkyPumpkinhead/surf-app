@@ -1,10 +1,10 @@
 import React from 'react';
 import './LandingPage.css';
 import { Link } from 'react-router-dom';
+import surfjotz1 from "../images/surfjotz1.jpeg"
 
 
 
-import surfjotz1 from "../surfjotz1.jpeg"
 
 export default function LandingPage(props) {
   return (

@@ -6,7 +6,7 @@
 } 
 
 .nav-link a:hover {
-  background: lightcyan;
+  background: rgb(255, 242, 224);
   color: black;
 }
 

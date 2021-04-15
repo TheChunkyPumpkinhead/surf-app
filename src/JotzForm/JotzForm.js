@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import config from '../config';
-import surfjotz1 from "../surfjotz1.jpeg"
+// import jotzimage2 from "./images/jotzimage2.jpeg";
+import jotzimage2 from "../images/jotzimage2.jpeg";
+
 import './JotzForm.css';
 
 
@@ -19,13 +21,13 @@ class JotzForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-  
+
     const jotz = {
       title: this.state.title,
       content: this.state.content,
       city: this.state.city,
-   
-      
+
+
     };
 
 
@@ -36,7 +38,7 @@ class JotzForm extends Component {
         body: JSON.stringify(jotz),
         headers: {
           'content-type': 'application/json',
-        
+
         },
       })
       .then((res) => {
@@ -49,7 +51,7 @@ class JotzForm extends Component {
       })
       .then((results) => {
         console.log(results);
-      this.props.history.push("/list")
+        this.props.history.push("/list");
       })
       .catch((error) => {
         console.log({ error });
@@ -59,12 +61,12 @@ class JotzForm extends Component {
   render() {
     return (
       <section className='add-jotz'>
-<main>
+        <main>
 
-<div className='jotz-form'>
-<img src={surfjotz1} alt="man on beach" />
-</div>
-</main>
+          <div className='jotz-form'>
+            <img src={jotzimage2} alt="man in  tube" />
+          </div>
+        </main>
 
         <form className='add-JotzForm' onSubmit={this.handleSubmit}>
 
@@ -91,7 +93,7 @@ class JotzForm extends Component {
               onChange={(event) => this.setState({ content: event.target.value })}
               required
             ></input></>
-             <label> City
+          <label> City
           <input
               type="city"
               className='input-city'

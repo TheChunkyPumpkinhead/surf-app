@@ -1,11 +1,16 @@
 * {
   box-sizing: border-box;
+}
 
-  
-  
-    
-   
-   
-  }
+.add-jotz {
+  height: 100vh;
+  width: 100%;
+}
+.add-JotzForm{
+  display: flex;
+  align-items: center;
+}
 
-
+.note-button{
+  margin-left: .1em;
+}
