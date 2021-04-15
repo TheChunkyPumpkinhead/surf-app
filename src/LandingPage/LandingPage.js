@@ -1,6 +1,7 @@
 import React from 'react';
 import './LandingPage.css';
-import {Link} from 'react-router-dom';
+import { Link } from 'react-router-dom';
+
 
 
 import surfjotz1 from "../surfjotz1.jpeg"
@@ -13,13 +14,17 @@ export default function LandingPage(props) {
         <div className='landing-page-header'>
           <h1 className='landing-h1'>Surf Jotz</h1>
 
-          <img src={surfjotz1} alt="pic" />
+          <img src={surfjotz1} alt="man on beach" />
         </div>
         <div className='landing-page-content'>
-          <p> Surf-Jotz helps you keep track of all your surfing details.Have a spot to avoid where all the groms hang? Need to remember where the best hidden spot is? Or just need to record the your gains? Then Surf-Jotz is for you! </p>
-          <p>The key to Surf-Jotz is to consistently document your surf spots, special spots or any other info you or others could use to have a great surf adventure. Surf-Jotz provides you with a quick and simple interface that helps you keep track of  all your surf related stuff.
-          </p>
-          <Link to="/home"> Lest </Link>
+          <p> Howzit! </p>
+          <p>Welcome to Surf Jots. Thanks for coastin by </p>
+
+          <button className='Landing-button' type='submit'>  <Link to='/about'>Click to Enter</Link></button>
+        
+
+          
+          
         </div>
 
       </div>

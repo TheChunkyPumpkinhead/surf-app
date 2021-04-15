@@ -13,17 +13,14 @@ const JotzApiService = {
           : res.json()
       )
   },
-  getJotz(jotzId) {
-    return fetch(`${config.API_ENDPOINT}/jotz/${jotzId}`, {
-      headers: {
-     
-      },
-    })
-      .then(res =>
-        (!res.ok)
-          ? res.json().then(e => Promise.reject(e))
-          : res.json()
-      )
+  async getJotz(jotzId) {
+    const res = await fetch(`${config.API_ENDPOINT}/jotz/${jotzId}`, {
+      headers: {},
+    });
+    return await (
+      (!res.ok)
+        ? res.json().then(e => Promise.reject(e))
+        : res.json());
   },
   
  

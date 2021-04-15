@@ -1,0 +1,15 @@
+.nav-link a {
+  color:white;
+  padding: 16px;
+  text-decoration: none;
+  display: block;
+} 
+
+.nav-link a:hover {
+  background: lightcyan;
+  color: black;
+}
+
+.nav-bar {
+  background: rgba(11, 143, 163, .8);
+  }

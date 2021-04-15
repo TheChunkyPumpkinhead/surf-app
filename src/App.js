@@ -20,6 +20,7 @@ class App extends Component {
           <Route path= "/about" component = {AboutPage} />
         <Route path="/add" component={JotzForm} />
         <Route path="/list" component={JotzFolder} /> 
+        
         </Switch>
         </BrowserRouter>
         </div>

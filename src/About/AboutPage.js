@@ -1,15 +1,20 @@
 import React from 'react';
 import './AboutPage.css';
+import jotzimage3 from "../jotzimage3.jpeg"
+
+
+
+
 
 export default function AboutPage(props) {
   return (
     <main>
       <div className='about-page'>
 
-        <header>
+        
           <h1>What is Surf Jotz?</h1>
-          <img src="" alt="" className='about-img' />
-        </header>
+          <img src={jotzimage3} alt="man with hat on beach"/>
+        
 
         <section className='about-page-section'>
 

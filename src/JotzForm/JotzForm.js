@@ -1,10 +1,13 @@
 import React, { Component } from 'react';
 import config from '../config';
-
+import surfjotz1 from "../surfjotz1.jpeg"
 import './JotzForm.css';
 
 
+
+
 class JotzForm extends Component {
+
   constructor(props) {
     super(props);
     this.state = {
@@ -16,7 +19,7 @@ class JotzForm extends Component {
 
   handleSubmit = (event) => {
     event.preventDefault();
-    //better to call payload instead of note
+  
     const jotz = {
       title: this.state.title,
       content: this.state.content,
@@ -24,10 +27,10 @@ class JotzForm extends Component {
    
       
     };
-    // console.log(note)
+
 
     fetch(`${config.API_ENDPOINT}/jotz/`,
-    // note._id is what?
+
       {
         method: 'POST',
         body: JSON.stringify(jotz),
@@ -46,8 +49,7 @@ class JotzForm extends Component {
       })
       .then((results) => {
         console.log(results);
-        // window.location = '/';
-        // where is the location for this?
+      this.props.history.push("/list")
       })
       .catch((error) => {
         console.log({ error });
@@ -56,7 +58,14 @@ class JotzForm extends Component {
 
   render() {
     return (
-      <section className='add-notes'>
+      <section className='add-jotz'>
+<main>
+
+<div className='jotz-form'>
+<img src={surfjotz1} alt="man on beach" />
+</div>
+</main>
+
         <form className='add-JotzForm' onSubmit={this.handleSubmit}>
 
           <label> Title
@@ -71,18 +80,19 @@ class JotzForm extends Component {
               required
             /></label>
 
-          <label> Note
+          <> Note
           <input
               type="text"
-              className='input-note'
-              placeholder='write notes here'
+              className='input-jotz'
+              placeholder='write jotz here'
               value={this.state.content}
               name='note'
               id='note'
               onChange={(event) => this.setState({ content: event.target.value })}
               required
-            />
-              <input
+            ></input></>
+             <label> City
+          <input
               type="city"
               className='input-city'
               placeholder='city'
@@ -93,7 +103,7 @@ class JotzForm extends Component {
               required
             />
           </label>
-          <button className='note-button' type='submit'>Add Note</button>
+          <button className='note-button' type='submit'>Add A Jot</button>
 
         </form>
       </section>
