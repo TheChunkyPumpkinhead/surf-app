@@ -31,4 +31,3 @@ export default function LandingPage(props) {
     </main>
   );
 }
-// export default LandingPage;

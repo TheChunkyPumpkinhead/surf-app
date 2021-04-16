@@ -1,8 +1,6 @@
 import React, { Component } from 'react';
 import config from '../config';
-// import jotzimage2 from "./images/jotzimage2.jpeg";
 import jotzimage2 from "../images/jotzimage2.jpeg";
-
 import './JotzForm.css';
 
 
