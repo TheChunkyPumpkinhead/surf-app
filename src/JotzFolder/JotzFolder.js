@@ -29,7 +29,7 @@ export default class  JotzFolder extends React.Component {
         return res.json();
       })
       .then((results) => {
-        console.log(results);
+      
         this.setState({
           list: results
         })

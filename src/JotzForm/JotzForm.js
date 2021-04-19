@@ -48,7 +48,7 @@ class JotzForm extends Component {
         return res.json();
       })
       .then((results) => {
-        console.log(results);
+       
         this.props.history.push("/list");
       })
       .catch((error) => {
@@ -68,33 +68,33 @@ class JotzForm extends Component {
 
         <form className='add-JotzForm' onSubmit={this.handleSubmit}>
 
-          <label> Title
+          <label> Title</label>
         <input
               type='text'
-              className='input-title'
+              className='input-area'
               placeholder='write title'
               value={this.state.title}
               name='title'
               id='title'
               onChange={(event) => this.setState({ title: event.target.value })}
               required
-            /></label>
+            />
 
-          <> Note
+<label> Note</label>
           <input
               type="text"
-              className='input-jotz'
+              className='input-area'
               placeholder='write jotz here'
               value={this.state.content}
               name='note'
               id='note'
               onChange={(event) => this.setState({ content: event.target.value })}
               required
-            ></input></>
-          <label> City
+            ></input>
+          <label> City     </label>
           <input
               type="city"
-              className='input-city'
+              className='input-area'
               placeholder='city'
               value={this.state.city}
               name='city'
@@ -102,7 +102,7 @@ class JotzForm extends Component {
               onChange={(event) => this.setState({ city: event.target.value })}
               required
             />
-          </label>
+     
           <button className='note-button' type='submit'>Add A Jot</button>
 
         </form>
