@@ -42,7 +42,7 @@ img {
   justify-content: space-between;
   margin: 30px;
   border-radius: 23%;
-  width: 80vw;
+  width: 60vw;
 }
 
 .Landing-button {
@@ -52,7 +52,6 @@ img {
   color: white;
   border: none;
   border-radius: .25em;
-  /* font-weight: bold; */
 }
 
 

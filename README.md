@@ -70,8 +70,8 @@ city( text)
 
 
 ## Screenshots 
-(Example) Landing Page
-:-------------------------:
+
+AboutPage
 ![AboutPage](/github-images/screenshots/about.png)
 HomePage
 ![HomePage](/github-images/screenshots/home.png)
