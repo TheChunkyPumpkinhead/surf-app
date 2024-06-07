@@ -14,14 +14,14 @@
 
   .about-paragraph {
     flex: 1;
-    text-align: right;
+    text-align: top;
     padding-right: 1em;
     padding-left: 2em;
   }
 
   .about-paragraph-2 {
     flex: 1;
-    text-align: left;
+    text-align: bottom;
     padding-left: 1em;
     padding-right: 2em;
   }

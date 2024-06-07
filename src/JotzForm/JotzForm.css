@@ -1,28 +1,32 @@
 * {
   box-sizing: border-box;
 }
+.centered-placeholder::placeholder {
+  text-align: center; /* This centers the placeholder text */
+}
 
 .add-jotz {
   height: 100vh;
   width: 100%;
 }
-.add-JotzForm{
+.add-JotzForm {
   display: flex;
   align-items: center;
   flex-direction: column;
 }
-.input-area{
+.input-area {
   border: none;
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
-.note-button{
-  margin-top:1em ;
-  margin-left: .1em;
+.note-button {
+  margin-top: 1em;
+  margin-left: 0.1em;
   display: inline-block;
-  padding: .3em .6em;
-  background: #1B8383;
+  padding: 0.3em 0.6em;
+  background: brown;
   color: white;
   border: none;
-  border-radius: .25em;
+  border-radius: 0.25em;
 }
-@media screen and (min-width:800px) {}
+@media screen and (min-width: 800px) {
+}

@@ -5,9 +5,9 @@
 .landing-page-header {
   padding-top: 2em;
 }
-    
+
 .landing-h1 {
-font-size: 22.5pt 
+  font-size: 22.5pt;
 }
 
 .landing-page-content {
@@ -15,6 +15,6 @@ font-size: 22.5pt
   padding-left: 2em;
   padding-right: 2em;
 }
-.Landing-button{
-  color:dodgerblue
+.Landing-button {
+  color: orangered;
 }
