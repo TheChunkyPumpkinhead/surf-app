@@ -23,7 +23,7 @@ class JotzForm extends Component {
     };
 
     fetch(
-      `${config.API_ENDPOINT}/jotz/`,
+      `${config.API_ENDPOINT}/jotz`,
 
       {
         method: "POST",
@@ -45,7 +45,7 @@ class JotzForm extends Component {
         this.props.history.push("/list");
       })
       .catch((error) => {
-        console.log({ error });
+        // console.log({ error }); thisis giving a json error when commented back in for an '<' character
       });
   };
 
